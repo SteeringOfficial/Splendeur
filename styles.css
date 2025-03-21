@@ -42,6 +42,13 @@ body{
 #text{
     text-transform:inherit;
 }
+.lien_mail, .lien_tel{
+    text-decoration: none;
+    color: #000;
+}
+.lien{
+    color: #37abc8;
+}
 
 /*Image2*/
 #image2{
