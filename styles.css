@@ -20,7 +20,7 @@ body{
     height: 75px;
     z-index: 10000000000;
 }
-#head_bar_logo{
+#head_bar_logo1{
     display: inline-block;
     position: absolute;
     top: 0%;
@@ -29,11 +29,23 @@ body{
     height: 75px;
     font-weight: bolder;
 }
-#head_bar ul{
+#head_bar_logo2{
+    display: none;
+}
+#menu{
+    display: none;
+}
+.menu {
     display: flex;
     list-style: none;
-    margin-top: 1.4%;
-    margin-left: 15%;
+    margin-top: 1.5%;
+    margin-left: 10%;
+    text-decoration: none;
+}
+#head_devis{
+    margin-top: -1%;
+    margin-left: 65%;
+    list-style: none;
 }
 #head_bar ul a{
     padding: 15px;
@@ -46,9 +58,7 @@ body{
 #head_bar ul a:hover{
     color:#37abc8;
 }
-#head_devis{
-    margin-left: 30%;
-}
+
 
 
 /*After/Now*/
@@ -96,6 +106,8 @@ img.displaySlide{
     right: 0;
 }
 
+
+
 /*Tarif1*/
 #partie1{
     background-color: #fff;
@@ -122,25 +134,20 @@ img.displaySlide{
 #devis_partie1:hover{
     transform: scale(1.06);
 }
-
 #partie1 img{
     display: inline-block;
     position: absolute;
     margin-left: 60%;
+    height: 400px;
 }
+
+
 
 /*Tarif2*/
 #partie2{
     background-color: #fff;
     width: 100%;
     height: 400px;
-}
-#partie2{
-    display: inline-block;
-    position: absolute;
-    margin-left: 45%;
-    margin-top: 3%;
-    font-size: 30px;
 }
 #devis_partie2{
     display: flex;
@@ -166,7 +173,10 @@ img.displaySlide{
     display: inline-block;
     position: absolute;
     margin-left: 5%;
+    height: 400px;
 }
+
+
 
 /*Vod*/
 #vod{
@@ -178,6 +188,8 @@ img.displaySlide{
     width: 100%;
     height: 450px;
 }
+
+
 
 /*Info/Contact/Horraire*/
 #info{
@@ -234,15 +246,12 @@ img.displaySlide{
 }
 .info_lienmail, .info_lientel{
     text-decoration: none;
-    color: #000;
-}
-.info_lienmail, .info_lientel:hover{
     color: #37abc8;
     font-size: 25px;
 }
 #info_email, #info_telephone{
-    height: 17px;
-    width: 19px;
+    height: 25px;
+    width: 25px;
 }
 
 /*Modal*/
@@ -343,19 +352,165 @@ footer{
     background-color: #000;
     color: #b7b7b7;
     font-weight:lighter;
-    font-size: 20px;
+    font-size: 19px;
     width: 100%;
     height: 100px;
 }
 #lienmail, #lientel{
     text-decoration: none;
-    color: #b7b7b7;
-}
-#lienmail, #lientel:hover{
     color: #37abc8;
-    font-size: 21px;
+    font-size: 19px;
 }
 #email, #telephone{
     height: 17px;
     width: 19px;
+}
+
+@media screen and (max-width: 799px) and (min-width: 320px) {
+    /*Head Bar*/
+    #head_bar_logo1{
+        display: none;
+    }
+    #head_bar_logo2{
+        display: inline-block;
+        position: absolute;
+        top: 5%;
+        left: 35%;
+        width: 50px;
+        height: 70px;
+        font-weight: bolder;
+    }
+    #head_devis{
+        margin-top: -55px;
+        margin-left: 55%;
+    }
+    #head_bar ul{
+        margin-left: 0%;
+    }
+    #head_bar > ul::after{
+        content: "";
+        display: block;
+        clear:both;
+    }
+    #menu{
+        display: inline-block;
+        cursor: pointer;
+    }
+    #menu li:hover .menu{
+        display: inline-block;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        padding: 0px;
+        z-index: 1000;
+    }
+    .menu{
+        display: none;
+        margin-top: 40px;
+        margin-left: 150px;
+    }
+    
+
+    /*SLIDER*/
+    .slider0 img{
+        width: 100%;
+    }
+
+
+    /*Tarif1*/
+    #partie1{
+        height: 575px;
+    }
+    #devis_partie1{
+        display: inline-block;
+        position: relative;
+        margin-top: 5px;
+    }
+    #partie1 img{
+        display: inline-block;
+        position: relative;
+        margin-left: 0%;
+        width: 100%;
+    }
+
+
+    /*Tarif2*/
+    #partie2{
+        height: 575px;
+    }
+    #devis_partie2{
+        display: inline-block;
+        position: relative;
+        margin-left: 25%;
+        margin-top: 5px;
+    }
+    #partie2 img{
+        display: inline-block;
+        position: relative;
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    /*Vod*/
+    #vods{
+        width: 100%;
+    }
+
+
+    /*Info/Contact/Horraire*/
+    #info{
+        height: 500px;
+    }
+    #P_H{
+        display: inline-block;
+        position: absolute;
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+    #contact{
+        display: inline-block;
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 30px;
+    }
+    #R_Sociaux{
+        display: inline-block;
+        position: absolute;
+        margin-top: 175px;
+        margin-left: 150px;
+    }
+    #R{
+        color: #000;
+    }
+    .tiktok{
+        text-decoration: none;
+        color: #000;
+    }
+    #devis_info{
+        margin-left: 120px;
+        margin-top: 250px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 800px){
+    /*Head Bar*/
+    #head_devis{
+        margin-left: 20%;
+    }
+    #head_bar ul{
+        margin-left: 0%;
+    }
+    #menu{
+        display: inline-block;
+    }
+    .menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 1281px){
+    /*Head Bar*/
+    #head_bar ul{
+        margin-left: 0%;
+    }
 }
