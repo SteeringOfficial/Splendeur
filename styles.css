@@ -22,8 +22,7 @@ body{
 }
 #head_bar_logo1{
     display: inline-block;
-    position: absolute;
-    top: 0%;
+    position: relative;
     left: 44%;
     width: 185px;
     height: 75px;
@@ -35,19 +34,20 @@ body{
 #menu{
     display: none;
 }
-.menu {
-    display: flex;
+#lien{
+    display: inline-block;
+}
+#lien_menu {
+    display: inline-block;
     list-style: none;
-    margin-top: 1.5%;
-    margin-left: 10%;
     text-decoration: none;
 }
 #head_devis{
-    margin-top: -1%;
-    margin-left: 65%;
+    display: inline-block;
+    margin-left: 30%;
     list-style: none;
 }
-#head_bar ul a{
+#head_bar a{
     padding: 15px;
     text-transform: capitalize;
     font-size: 20px;
@@ -55,7 +55,7 @@ body{
     color: #fff;
     position: relative;
 }
-#head_bar ul a:hover{
+#head_bar a:hover{
     color:#37abc8;
 }
 
@@ -373,30 +373,23 @@ footer{
     }
     #head_bar_logo2{
         display: inline-block;
-        position: absolute;
-        top: 5%;
-        left: 35%;
+        position: relative;
+        top: 7px;
+        left: 30%;
         width: 50px;
         height: 70px;
         font-weight: bolder;
     }
     #head_devis{
-        margin-top: -55px;
         margin-left: 55%;
-    }
-    #head_bar ul{
-        margin-left: 0%;
-    }
-    #head_bar > ul::after{
-        content: "";
-        display: block;
-        clear:both;
     }
     #menu{
         display: inline-block;
         cursor: pointer;
+        right: 120px;
+        bottom: 7px;
     }
-    #menu li:hover .menu{
+    #menu li:hover #lien_menu{
         display: inline-block;
         position: absolute;
         top: 100%;
@@ -404,7 +397,7 @@ footer{
         padding: 0px;
         z-index: 1000;
     }
-    .menu{
+    #lien_menu{
         display: none;
         margin-top: 40px;
         margin-left: 150px;
