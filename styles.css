@@ -18,7 +18,7 @@ body{
     background-color: #000;
     width: 100%;
     height: 75px;
-    z-index: 10000000000;
+    z-index: 1000;
 }
 #head_bar_logo1{
     display: inline-block;
@@ -31,21 +31,39 @@ body{
 #head_bar_logo2{
     display: none;
 }
-#menu{
+#menu img{
     display: none;
 }
 #lien{
     display: inline-block;
+    position: absolute;
+    top: 25px;
+    margin-left: -250px;
+    padding: 0;
 }
 #lien_menu {
     display: inline-block;
+    position: relative;
     list-style: none;
     text-decoration: none;
+    padding: 0;
+}
+#responsive{
+    display: none;
+    /*padding: 15px;
+    text-transform: capitalize;
+    font-size: 20px;
+    text-decoration: 0;
+    color: #fff;
+    position: relative;
+    cursor: pointer;*/
 }
 #head_devis{
     display: inline-block;
-    margin-left: 30%;
+    position: absolute;
+    margin-left: 800px;
     list-style: none;
+    top: 25px;
 }
 #head_bar a{
     padding: 15px;
@@ -54,6 +72,9 @@ body{
     text-decoration: 0;
     color: #fff;
     position: relative;
+}
+#head_bar li:hover{
+    color:#37abc8;
 }
 #head_bar a:hover{
     color:#37abc8;
@@ -155,7 +176,7 @@ img.displaySlide{
     border: 0;
     border-radius: 50px;
     padding: 8px 15px;
-    margin-left: 40%;
+    margin-left: 45%;
     margin-top: 6%;
     color: #fff;
     background-color: #1ca700;
@@ -200,14 +221,14 @@ img.displaySlide{
 #P_H{
     display: inline-block;
     position: absolute;
-    margin-top: 3%;
-    margin-left: 15%;
+    margin-top: 50px;
+    margin-left: 7%;
 }
 #R_Sociaux{
     display: inline-block;
     position: absolute;
-    margin-top: 3%;
-    margin-left: 60%;
+    margin-top: 50px;
+    margin-left: 65%;
 }
 #R{
     color: #000;
@@ -220,8 +241,8 @@ img.displaySlide{
 #contact{
     display: inline-block;
     position: absolute;
-    margin-top: 7%;
-    margin-left: 15%;
+    margin-top: 120px;
+    margin-left: 7%;
 }
 
 #devis_info{
@@ -231,7 +252,7 @@ img.displaySlide{
     border-radius: 50px;
     padding: 8px 15px;
     margin-left: 43%;
-    margin-top: 3%;
+    margin-top: 50px;
     color: #fff;
     background-color: #1ca700;
     text-transform: uppercase;
@@ -325,8 +346,6 @@ img.displaySlide{
     margin-bottom: 5px;
     font-size: 25px;
 }
-
-
 #copie{
     width: 100%;
     border: none;
@@ -334,13 +353,17 @@ img.displaySlide{
     border-radius: 3px;
     margin-top: 30px;
     font-size: 30px;
-    color: #444;
-    background-color: greenyellow;
+    color: #fff;
+    background-color: #37abc8;
 }
 #copie:hover{
-    background-color: #444;
+    background-color: #1ca700;
     color: #fff;
     cursor: pointer;
+}
+.modal-container a{
+    text-decoration: none;
+    color: #37abc8;
 }
 
 /*Footer*/
@@ -374,20 +397,194 @@ footer{
     #head_bar_logo2{
         display: inline-block;
         position: relative;
-        top: 7px;
-        left: 30%;
+        top: -10px;
+        left: 15%;
         width: 50px;
         height: 70px;
         font-weight: bolder;
     }
     #head_devis{
-        margin-left: 55%;
+        display: inline;
+        position: relative;
+        margin-left: 0%;
+        top: -25px;
+    }
+    #lien{
+        display: none;
+    }
+    #lien_responsive{
+        display: inline-block;
+        position: relative;
+        width: 70px;
+        height: 70px;
+        left: -120px;
+    }
+    #responsive{
+        display: inline-block;
+        padding: 15px;
+        text-transform: capitalize;
+        font-size: 20px;
+        text-decoration: 0;
+        color: #fff;
+        position: relative;
+        cursor: pointer;
+    }
+    #lien_menu_responsive{
+        display: none;
+    }
+    #logo_menu{
+        display: block;
+    }
+    #menu{
+        display: inline-block;
+        position: absolute;
+        cursor: pointer;
+        right: 120px;
+        bottom: 7px;
+    }
+    #lien_menu{
+        display: none;
+        margin-top: 40px;
+        margin-left: 150px;
+    }
+    
+
+    /*SLIDER*/
+    .slider0 img{
+        width: 100%;
+    }
+
+
+    /*Tarif1*/
+    #partie1{
+        height: 575px;
+    }
+    #devis_partie1{
+        display: inline-block;
+        position: relative;
+        margin-top: 5px;
+    }
+    #partie1 img{
+        display: inline-block;
+        position: relative;
+        margin-left: 0%;
+        width: 100%;
+    }
+
+
+    /*Tarif2*/
+    #partie2{
+        height: 575px;
+    }
+    #devis_partie2{
+        display: inline-block;
+        position: relative;
+        margin-left: 25%;
+        margin-top: 5px;
+    }
+    #partie2 img{
+        display: inline-block;
+        position: relative;
+        margin-left: 0%;
+        width: 100%;
+    }
+
+
+    /*Vod*/
+    #vods{
+        width: 100%;
+    }
+
+
+    /*Info/Contact/Horraire*/
+    #info{
+        height: 500px;
+    }
+    #P_H{
+        display: inline-block;
+        position: absolute;
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+    #contact{
+        display: inline-block;
+        position: absolute;
+        margin-top: 120px;
+        margin-left: 10px;
+    }
+    #R_Sociaux{
+        display: inline-block;
+        position: absolute;
+        margin-top: 200px;
+        margin-left: 150px;
+    }
+    #R{
+        color: #000;
+    }
+    .tiktok{
+        text-decoration: none;
+        color: #000;
+    }
+    #devis_info{
+        margin-left: 120px;
+        margin-top: 250px;
+    }
+
+    /*Modal*/
+    .modal{
+        max-width: 500px;
+        min-width: 100px;
+        max-height: 550px;
+        min-height: 300px;
+        opacity: 0;
+        width: 95%;
+        padding: 30px;
+        background: #fff;
+        border-radius: 5px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% + 50px));
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 800px){
+    /*Head Bar*/
+    #head_bar_logo1{
+        left: 35%;
+    }
+    #head_devis{
+        display: inline;
+        position: relative;
+        margin-left: 27%;
+        top: -25px;
+        padding: 0;
+    }
+    #lien{
+        display: none;
+    }
+    #lien_responsive{
+        display: none;
+    }
+    #responsive{
+        display: inline-block;
+        padding: 15px;
+        text-transform: capitalize;
+        font-size: 20px;
+        text-decoration: 0;
+        color: #fff;
+        position: relative;
+        cursor: pointer;
     }
     #menu{
         display: inline-block;
         cursor: pointer;
-        right: 120px;
+        right: 220px;
         bottom: 7px;
+        padding: 0;
     }
     #menu li:hover #lien_menu{
         display: inline-block;
@@ -401,8 +598,9 @@ footer{
         display: none;
         margin-top: 40px;
         margin-left: 150px;
+        padding: 0;
     }
-    
+
 
     /*SLIDER*/
     .slider0 img{
@@ -482,28 +680,5 @@ footer{
     #devis_info{
         margin-left: 120px;
         margin-top: 250px;
-    }
-}
-
-@media screen and (max-width: 1280px) and (min-width: 800px){
-    /*Head Bar*/
-    #head_devis{
-        margin-left: 20%;
-    }
-    #head_bar ul{
-        margin-left: 0%;
-    }
-    #menu{
-        display: inline-block;
-    }
-    .menu{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1550px) and (min-width: 1281px){
-    /*Head Bar*/
-    #head_bar ul{
-        margin-left: 0%;
     }
 }
