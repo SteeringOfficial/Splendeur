@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="utf-8">
         <title>Splendeur</title>
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/logo/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/logo/favicon.svg" />
+        <link rel="shortcut icon" href="/logo/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-touch-icon.png" />
+        <link rel="manifest" href="/logo/site.webmanifest" />
     </head>
     <body>
         <!--Head Bar: contact, devis, histoire/valeur et idéilogies de l'entreprise-->
@@ -21,16 +25,19 @@
             </div>
             <nav id="responsive">
                 <ul id="lien_responsive">
-                    <li id="menu"><button id="logo-menu"><img src="logo/menu.png" alt="menu" ></button>
+                    <li id="menu">
+                        <button id="logo-menu">
+                            <img src="logo/menu.png" alt="menu">
+                        </button>
                         <ul id="lien_menu_responsive">
-                            <li href="#">nous contactés</li>
-                            <li href="#">nos prestation</li>
-                            <li href="#">qui somme nous?</li>
+                            <li><a href="#">Nous contacter</a></li>
+                            <li><a href="#">Nos prestations</a></li>
+                            <li><a href="#">Qui sommes-nous ?</a></li>
                         </ul>
                     </li>
                 </ul>
-            </nav>
-            <p id="head_devis"><a href="#">faire un devis</a></p>
+            </nav>            
+            <p id="head_devis"><a href="#" class="btn-info modal-trigger" onclick="showSection('devis_partie1')">faire un devis</a></p>
         </div>
 
         <br><br><br><br>

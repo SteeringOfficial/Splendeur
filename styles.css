@@ -397,7 +397,7 @@ footer{
     #head_bar_logo2{
         display: inline-block;
         position: relative;
-        top: -10px;
+        top: 5px;
         left: 15%;
         width: 50px;
         height: 70px;
@@ -412,22 +412,26 @@ footer{
     #lien{
         display: none;
     }
-    #lien_responsive{
+    #responsive{
         display: inline-block;
         position: relative;
+        padding: 0px;
         width: 70px;
         height: 70px;
         left: -120px;
-    }
-    #responsive{
-        display: inline-block;
-        padding: 15px;
         text-transform: capitalize;
         font-size: 20px;
         text-decoration: 0;
         color: #fff;
         position: relative;
         cursor: pointer;
+    }
+    #lien_responsive{
+        display: inline-block;
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        left: -120px;
     }
     #lien_menu_responsive{
         display: none;
@@ -542,7 +546,7 @@ footer{
         background: #fff;
         border-radius: 5px;
         position: absolute;
-        top: 60%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, calc(-50% + 50px));
         transition: opacity 0.4s ease-out, transform 0.4s ease-out;
