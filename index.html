@@ -14,8 +14,8 @@
     <body>
         <!--Head Bar: contact, devis, histoire/valeur et idéilogies de l'entreprise-->
         <div id="head_bar">
-            <a href="index.html"><img src="logo/Splendeur_Logo_1.png" alt="logo" id="head_bar_logo1"></a>
-            <a href="index.html"><img src="logo/Splendeur_Logo_2.png" alt="logo" id="head_bar_logo2"></a>
+            <a href="index.html" id="logo1"><img src="logo/Splendeur_Logo_1.png" alt="logo" id="head_bar_logo1"></a>
+            <a href="index.html" id="logo2"><img src="logo/Splendeur_Logo_2.png" alt="logo" id="head_bar_logo2"></a>
             <div id="lien">
                 <div id="lien_menu">
                     <a href="#">nous contactés</a>
@@ -23,20 +23,18 @@
                     <a href="#">qui somme nous?</a>
                 </div>
             </div>
-            <nav id="responsive">
-                <ul id="lien_responsive">
-                    <li id="menu">
-                        <button id="logo-menu">
-                            <img src="logo/menu.png" alt="menu">
-                        </button>
-                        <ul id="lien_menu_responsive">
-                            <li><a href="#">Nous contacter</a></li>
-                            <li><a href="#">Nos prestations</a></li>
-                            <li><a href="#">Qui sommes-nous ?</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>            
+            <div id="responsive">
+                <button id="logo-menu">
+                    <img src="logo/menu.png" alt="menu" id="img_logo_menu">
+                </button>
+                <div id="lien_menu_responsive" style="display: none;">
+                    <ul>
+                        <li><a href="#">Nous contacter</a></li>
+                        <li><a href="#">Nos prestations</a></li>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                    </ul>
+                </div>
+            </div>            
             <p id="head_devis"><a href="#" class="btn-info modal-trigger" onclick="showSection('devis_partie1')">faire un devis</a></p>
         </div>
 
@@ -47,7 +45,7 @@
             <div class="slider0">
                 <div class="slides0">
                     <img src="ph/AV_AP_0.png" class="slide0" alt="img1">
-                    <img src="ph/AV_AP_1.png" class="slide0" alt="img2">
+                    <img src="ph/AV_AP_1.png" class="slide0" alt="img2"  style="display: none;">
                 </div>
                 <button class="prev0" onclick="prevSlide0()">&#10094</button>
                 <button class="next0" onclick="nextSlide0()">&#10095</button>
@@ -99,7 +97,7 @@
         <div class="overlay modal-trigger"></div>
         <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
             <button aria-label="close-modal" class="close-modal modal-trigger">X</button>
-            <h1 id="modalTitle">Je suis intéréssé(e)</h1>
+            <h1 id="modalTitle">Voulez-vous des vitres propres?</h1>
             <div id="text">
                 <p id="question1">
                     Mes fenêtre sont à hauteur humaine(OUI/NON).(Photos nécessaires.)
