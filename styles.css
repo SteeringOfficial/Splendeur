@@ -440,6 +440,9 @@ footer{
     #lien{
         display: none;
     }
+    #lien_menu_responsive{
+        display: none;
+    }
     #responsive{
         display: inline-block;
         position: relative;
@@ -454,7 +457,6 @@ footer{
         color: #fff;
         position: relative;
         cursor: pointer;
-        z-index: 100000000000000000;
     }
     #logo_menu{
         display: inline-block;
@@ -462,6 +464,16 @@ footer{
     }
     #logo_menu::after #lien_menu_responsive{
         display: inline-block;
+        position: absolute;
+    }
+    #lien_menu_responsive{
+        position: absolute;
+        top: 67px;
+        left: 0px;
+    }
+    #lien_menu_responsive li{
+        list-style: none;
+        background-color: #000;
     }
     #img_logo_menu{
         display: inline-block;
