@@ -1,44 +1,31 @@
 // Gestion des sliders pour les images
-function createSlider(slidesSelector, displayClass) {
-    const slides = document.querySelectorAll(slidesSelector);
-    let index = 0;
-    let intervalId = null;
+let slideIndex0 = 0;
+const slides0 = document.querySelectorAll(".slide0");
 
-    function showSlide(newIndex) {
-        index = (newIndex + slides.length) % slides.length;
-        slides.forEach(slide => slide.classList.remove(displayClass));
-        slides[index].classList.add(displayClass);
-    }
-
-    function prevSlide() {
-        clearInterval(intervalId);
-        showSlide(index - 1);
-    }
-
-    function nextSlide() {
-        clearInterval(intervalId);
-        showSlide(index + 1);
-    }
-
-    function startAutoSlide(interval = 5000) {
-        intervalId = setInterval(() => {
-            showSlide(index + 1);
-        }, interval);
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-        if (slides.length > 0) {
-            showSlide(0);
-            startAutoSlide();
-        }
+function showSlide0(index) {
+    slides0.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
     });
-
-    return { prevSlide, nextSlide };
 }
 
-const slider0 = createSlider(".slides0 img", "displaySlide");
-window.prevSlide0 = slider0.prevSlide;
-window.nextSlide0 = slider0.nextSlide;
+function nextSlide0() {
+    slideIndex0 = (slideIndex0 + 1) % slides0.length;
+    showSlide0(slideIndex0);
+}
+
+function prevSlide0() {
+    slideIndex0 = (slideIndex0 - 1 + slides0.length) % slides0.length;
+    showSlide0(slideIndex0);
+}
+
+// Initialisation
+document.addEventListener("DOMContentLoaded", () => {
+    showSlide0(slideIndex0);
+});
+
+setInterval(() => {
+    nextSlide0();
+}, 5000); // toutes les 5 secondes
 
 //ModalContainer
 const modalContainer = document.querySelector(".modal-container");
