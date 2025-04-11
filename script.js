@@ -71,15 +71,15 @@ if(navClose){
 
 /*Responsive Logo Menu*/
 document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById("logo-menu");
-    const menuResponsive = document.getElementById("lien_menu_responsive");
+const menuBtn = document.getElementById("logo-menu");
+const menuResponsive = document.getElementById("lien_menu_responsive");
 
-    menuBtn.addEventListener("click", function () {
-        // Toggle l'affichage : "none" -> "block" ou l'inverse
-        if (menuResponsive.style.display === "inline-block") {
-            menuResponsive.style.display = "none";
-        } else {
-            menuResponsive.style.display = "inline-block";
-        }
-    });
+menuBtn.addEventListener("click", function () {
+    // Toggle l'affichage : "none" -> "block" ou l'inverse
+    if (menuResponsive.style.display === "inline-block") {
+        menuResponsive.style.display = "none";
+    } else {
+        menuResponsive.style.display = "inline-block";
+    }
+});
 });
