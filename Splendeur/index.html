@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Splendeur</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/logo/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/logo/favicon.svg" />
+        <link rel="shortcut icon" href="/logo/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo/apple-touch-icon.png" />
+        <link rel="manifest" href="/logo/site.webmanifest" />
+    </head>
+    <body>
+        <!--Head Bar: contact, devis, histoire/valeur et idéilogies de l'entreprise-->
+        <div id="head_bar">
+            <a href="index.html" id="logo1"><img src="logo/Splendeur_Logo_1.png" alt="logo" id="head_bar_logo1"></a>
+            <a href="index.html" id="logo2"><img src="logo/Splendeur_Logo_2.png" alt="logo" id="head_bar_logo2"></a>
+            <div id="lien">
+                <div id="lien_menu">
+                    <a href="#contact">nous contacter</a>
+                    <a href="prestations.html">nos prestations</a>
+                    <a href="a-propos.html">qui somme nous?</a>
+                </div>
+            </div>
+            <div id="responsive">
+                <button id="logo-menu">
+                    <img src="logo/menu.png" alt="menu" id="img_logo_menu">
+                </button>
+                <div id="lien_menu_responsive" >
+                    <nav>
+                        <ul>
+                            <li><a href="#contact">Nous contacter</a></li>
+                            <li><a href="prestations.html">Nos prestations</a></li>
+                            <li><a href="a-propos.html">Qui sommes-nous ?</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+            <p id="head_devis"><a href="#" class="btn-info modal-trigger" onclick="showSection('devis_partie1')">faire un devis</a></p>
+        </div>
+
+        <br><br><br><br>
+
+        <!--Photo avant/après. Déroulement sur 3/4 exemples-->
+        <div id="after_now">
+            <div class="slider0">
+                <div class="slides0">
+                    <img src="ph/AV_AP_0.png" class="slide0" alt="img1">
+                    <img src="ph/AV_AP_1.png" class="slide0" alt="img2"  style="display: none;">
+                </div>
+                <button class="prev0" onclick="prevSlide0()">&#10094</button>
+                <button class="next0" onclick="nextSlide0()">&#10095</button>
+            </div>
+        </div>
+        <br>
+
+        <!--Tarif Largeur et Hauteur Max ??? + photo d'exemple + bouton de devis-->
+        <div id="partie1">
+            <img src="ph/Photo.png" alt="img1">
+            <button id="devis_partie1" class="btn-info modal-trigger" type="button" onclick="showSection('devis_partie1')">Devis</button>
+        </div>
+        <br>
+
+        <!--Tarif Largeur et Hauteur Max ???, + photo d'exemple + bouton de devis-->
+        <div id="partie2">
+            <img src="ph/Photo.png" alt="img1">
+            <button id="devis_partie2" class="btn-info modal-trigger" type="button" onclick="showSection('devis_partie2')">Devis</button>
+        </div>
+        <br>
+
+        <!--Montage VOD de Splendeur-->
+        <div id="vod">
+            <video id="vods" controls="controls" src="ph/vod.mp4"></video>
+        </div>
+        <br>
+
+        <!--Contact, réseaux sociaux, Horraires, Secteur d'activités(69,... ect) + bouton de devis-->
+        <div id="info">
+            <div id="P_H">
+                <p id="question">Quels sont nos disponibilités, ainsi que notre périmètre d'activités?</p>
+                <p id="P">Périmètre d'activités: Rhône-Alpes et ces allentours</p>
+                <p id="H">Disponibilités: 8h/18h 7j/7j</p>
+            </div>
+            <div id="R_Sociaux">
+                <p id="R">Nos réseaux sociaux:</p>
+                <p id="tiktok"><a href="" class="tiktok">TikTok</a></p>
+            </div>
+            <button id="devis_info" class="btn-info modal-trigger" type="button" onclick="showSection('devis_info')">Devis</button>
+            <div id="contact">
+                <p id="info_e-mail"><img id="info_email" src="logo/e-mail.png" alt="e-mail"><a href="mailto:splendeur.service@gmail.com" class="info_lienmail">splendeur.service@gmail.com</a></p>
+                <p id="info_tel"><img id="info_telephone" src="logo/téléphone.png" alt="telephone"><a href="tel:0680001935" class="info_lientel">06.80.00.19.35</a></p>
+            </div>
+        </div>
+    </body>
+
+    <!--Modal pour Devis-->
+    <div class="modal-container">
+        <div class="overlay modal-trigger"></div>
+        <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
+            <button aria-label="close-modal" class="close-modal modal-trigger">X</button>
+            <h1 id="modalTitle">Voulez-vous des vitres propres?</h1>
+            <div id="text">
+                <p id="question1">
+                    Mes fenêtre sont à hauteur humaine(OUI/NON).(Photos nécessaires.)
+                </p>
+                <p id="question2">
+                    Fenêtres accessibles(OUI/NON).(Photos nécessaires.)
+                </p>
+                <p id="question3">
+                    J'habite à ... .
+                </p>
+                <p id="question4">
+                    Mon numéro de téléphone est le ... .
+                </p>
+                <p id="question4">
+                    Je m'appelle ... .
+                </p>
+            </div>
+            <a href="mailto:splendeur.service@gmail.com"><button id="copie">E-mail</button></a>
+            <p id="dialogDesc">Ou <br> Contacter-nous directement par téléphone<br><a href="tel:0680001935">06.80.00.19.35</a></p>
+        </div>
+    </div>
+    <!--Bas de Page-->
+    <footer>
+        <!--Droit Auteur, -->
+        <div id="footer_bar">
+            <p class="copyright">© 2025 Splendeur. Tous droits réservés</p>
+            <p id="e-mail"><img id="email" src="logo/e-mail.png" alt="e-mail"><a href="mailto:splendeur.service@gmail.com" id="lienmail">splendeur.service@gmail.com</a></p>
+            <p id="tel"><img id="telephone" src="logo/téléphone.png" alt="telephone"><a href="tel:0680001935" id="lientel">06.80.00.19.35</a></p>
+        </div>
+    </footer>
+    <!--JavaScript-->
+    <script src="script.JS"></script>
+</html>

@@ -1,0 +1,103 @@
+<!-- PAGE : Nos prestations -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Prestations - Splendeur</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="head_bar">
+        <a href="index.html" id="logo1"><img src="logo/Splendeur_Logo_1.png" alt="logo" id="head_bar_logo1"></a>
+        <a href="index.html" id="logo2"><img src="logo/Splendeur_Logo_2.png" alt="logo" id="head_bar_logo2"></a>
+        <div id="lien">
+            <div id="lien_menu">
+                <a href="#contact">nous contacter</a>
+                <a href="prestations.html">nos prestations</a>
+                <a href="a-propos.html">qui somme nous?</a>
+            </div>
+        </div>
+        <div id="responsive">
+            <button id="logo-menu">
+                <img src="logo/menu.png" alt="menu" id="img_logo_menu">
+            </button>
+            <div id="lien_menu_responsive" >
+                <nav>
+                    <ul>
+                        <li><a href="#contact">Nous contacter</a></li>
+                        <li><a href="prestations.html">Nos prestations</a></li>
+                        <li><a href="a-propos.html">Qui sommes-nous ?</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>            
+        <p id="head_devis"><a href="#" class="btn-info modal-trigger" onclick="showSection('devis_partie1')">faire un devis</a></p>
+    </div>
+
+    <br><br><br><br>
+
+  <main>
+    <section>
+      <h1>Nos Prestations</h1>
+      <p>Découvrez l'ensemble de nos services professionnels, adaptés à vos besoins.</p>
+
+      <div class="prestation">
+        <h2>Nettoyage de vitres</h2>
+        <img src="ph/prestation-vitres.jpg" alt="Nettoyage de vitres">
+        <p>Des vitres éclatantes, même en hauteur. Intervention rapide et soignée.</p>
+      </div>
+
+      <div class="prestation">
+        <h2>Entretien de locaux</h2>
+        <img src="ph/prestation-locaux.jpg" alt="Entretien de bureaux">
+        <p>Propreté et hygiène garantie pour vos espaces de travail et commerces.</p>
+      </div>
+
+      <div class="prestation">
+        <h2>Autres services personnalisés</h2>
+        <p>Besoin particulier ? Contactez-nous pour un devis personnalisé.</p>
+      </div>
+
+      <a href="#contact" class="btn">Demander un devis</a>
+    </section>
+  </main>
+
+  <!--Modal pour Devis-->
+  <div class="modal-container">
+    <div class="overlay modal-trigger"></div>
+    <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
+        <button aria-label="close-modal" class="close-modal modal-trigger">X</button>
+        <h1 id="modalTitle">Voulez-vous des vitres propres?</h1>
+        <div id="text">
+            <p id="question1">
+                Mes fenêtre sont à hauteur humaine(OUI/NON).(Photos nécessaires.)
+            </p>
+            <p id="question2">
+                Fenêtres accessibles(OUI/NON).(Photos nécessaires.)
+            </p>
+            <p id="question3">
+                J'habite à ... .
+            </p>
+            <p id="question4">
+                Mon numéro de téléphone est le ... .
+            </p>
+            <p id="question4">
+                Je m'appelle ... .
+            </p>
+        </div>
+        <a href="mailto:splendeur.service@gmail.com"><button id="copie">E-mail</button></a>
+        <p id="dialogDesc">Ou <br> Contacter-nous directement par téléphone<br><a href="tel:0680001935">06.80.00.19.35</a></p>
+    </div>
+</div>
+
+  <footer>
+    <!--Droit Auteur, -->
+    <div id="footer_bar">
+        <p class="copyright">© 2025 Splendeur. Tous droits réservés</p>
+        <p id="e-mail"><img id="email" src="logo/e-mail.png" alt="e-mail"><a href="mailto:splendeur.service@gmail.com" id="lienmail">splendeur.service@gmail.com</a></p>
+        <p id="tel"><img id="telephone" src="logo/téléphone.png" alt="telephone"><a href="tel:0680001935" id="lientel">06.80.00.19.35</a></p>
+    </div>
+</footer>
+</body>
+</html>
