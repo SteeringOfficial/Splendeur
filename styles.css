@@ -380,6 +380,41 @@ footer{
     width: 19px;
 }
 
+/*PAGE PRESTATION*/
+/*main*/
+#main_prestation{
+    text-align: center;
+
+}
+/*devis*/
+#devis_prestation{
+    display: inline-block;
+    position: relative;
+    border: 0;
+    border-radius: 50px;
+    padding: 8px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #1ca700;
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+#devis_prestation:hover{
+    transform: scale(1.06);
+}
+
+
+/*PAGE A-PROPOS*/
+/*main*/
+#main_a-propos{
+    text-align: center;
+}
+
 /*Iphone SE*/
 @media screen and (max-width: 375px) {
     .modal{
