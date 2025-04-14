@@ -384,7 +384,7 @@ footer{
 /*main*/
 #main_prestation{
     text-align: center;
-
+    font-size: 20px;
 }
 /*devis*/
 #devis_prestation{
@@ -413,6 +413,14 @@ footer{
 /*main*/
 #main_a-propos{
     text-align: center;
+    font-size: 20px;
+}
+.btn{
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #37abc8;
+    font-size: 30px;
 }
 
 /*Iphone SE*/
@@ -623,6 +631,20 @@ footer{
     }
     .modal p{
         font-size: 24px;
+    }
+
+
+    /*PAGE PRESTATION*/
+    /*main*/
+    #main_prestation img{
+        width: 100%;
+    }
+
+
+    /*PAGE A-PROPOS*/
+    /*main*/
+    #main_a-propos img{
+        width: 100%;
     }
 }
 
