@@ -529,10 +529,11 @@ footer{
     #lien_menu_responsive li{
         list-style: none;
         background-color: #000;
-        border: 1px solid #37abc8;
+        border: 1px solid #fff;
+        text-align: center;
     }
     #lien_menu_responsive li a{
-        color: #37abc8;
+        color: #fff;
     }
     #img_logo_menu{
         display: inline-block;
