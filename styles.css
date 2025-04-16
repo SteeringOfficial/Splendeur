@@ -529,6 +529,10 @@ footer{
     #lien_menu_responsive li{
         list-style: none;
         background-color: #000;
+        border: 1px solid #37abc8;
+    }
+    #lien_menu_responsive li a{
+        color: #37abc8;
     }
     #img_logo_menu{
         display: inline-block;
