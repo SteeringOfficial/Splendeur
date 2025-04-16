@@ -672,7 +672,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 1280px) and (min-width: 800px){
+@media screen and (max-width: 1385px) and (min-width: 800px){
     /*Head Bar*/
     #head_bar_logo1{
         left: 35%;
