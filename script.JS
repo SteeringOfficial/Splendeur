@@ -101,3 +101,34 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+/* VOD BUTTON */
+const video = document.getElementById("vods");
+const progressBar = document.getElementById("progressBar");
+const progressContainer = document.getElementById("progressContainer");
+
+function togglePlayPause() {
+    const button = document.getElementById("playPauseButton");
+    if (video.paused) {
+        video.play();
+        button.textContent = "⏸";
+    } else {
+        video.pause();
+        button.textContent = "▶";
+    }
+}
+
+// Met à jour la barre en fonction du temps
+video.addEventListener("timeupdate", () => {
+    const percentage = (video.currentTime / video.duration) * 100;
+    progressBar.style.width = `${percentage}%`;
+});
+
+// Aller à un moment donné quand on clique sur la barre
+function seekVideo(event) {
+    const rect = progressContainer.getBoundingClientRect();
+    const offsetX = event.clientX - rect.left;
+    const percentage = offsetX / rect.width;
+    video.currentTime = percentage * video.duration;
+}
+
