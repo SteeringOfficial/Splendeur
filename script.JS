@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showResponsiveSlide0(slideIndexResponsive);
 });
 
-setReponsiveInterval(() => {
+setInterval(() => {
     nextResponsiveSlide0();
 }, 5000); // toutes les 5 secondes
 
