@@ -27,46 +27,77 @@ setInterval(() => {
     nextSlide0();
 }, 5000); // toutes les 5 secondes
 
-//ModalContainer
-const modalContainer = document.querySelector(".modal-container");
-const modalTriggers = document.querySelectorAll(".modal-trigger");
 
-modalTriggers.forEach(trigger => trigger.addEventListener("click", toggleModal))
+// Gestion des sliders pour les images en responsive
+let slideIndexResponsive = 0;
+const responsive_slides0 = document.querySelectorAll(".responsive_slide0");
 
-function toggleModal(){
-    modalContainer.classList.toggle("active")
+function showResponsiveSlide0(index) {
+    responsive_slides0.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+    });
 }
+
+function nextResponsiveSlide0() {
+    slideIndexResponsive = (slideIndexResponsive + 1) % responsive_slides0.length;
+    showResponsiveSlide0(slideIndexResponsive);
+}
+
+function prevResponsiveSlide0() {
+    slideIndexResponsive = (slideIndexResponsive - 1 + responsive_slides0.length) % responsive_slides0.length;
+    showResponsiveSlide0(slideIndexResponsive);
+}
+
+// Initialisation
+document.addEventListener("DOMContentLoaded", () => {
+    showResponsiveSlide0(slideIndexResponsive);
+});
+
+setReponsiveInterval(() => {
+    nextResponsiveSlide0();
+}, 5000); // toutes les 5 secondes
+
+
+//ModalContainer
+    const modalContainer = document.querySelector(".modal-container");
+    const modalTriggers = document.querySelectorAll(".modal-trigger");
+
+    modalTriggers.forEach(trigger => trigger.addEventListener("click", toggleModal))
+
+    function toggleModal(){
+        modalContainer.classList.toggle("active")
+    }
 
 //Responsive Head_Bar
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+    const navMenu = document.getElementById('nav-menu'),
+        navToggle = document.getElementById('nav-toggle'),
+        navClose = document.getElementById('nav-close')
 
-/* Menu show */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
-}
+    /* Menu show */
+    if(navToggle){
+        navToggle.addEventListener('click', () =>{
+            navMenu.classList.add('show-menu')
+        })
+    }
 
-/* Menu hidden */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
-}
+    /* Menu hidden */
+    if(navClose){
+        navClose.addEventListener('click', () =>{
+            navMenu.classList.remove('show-menu')
+        })
+    }
 
 /*Responsive Logo Menu*/
 document.addEventListener("DOMContentLoaded", function () {
-const menuBtn = document.getElementById("logo-menu");
-const menuResponsive = document.getElementById("lien_menu_responsive");
+    const menuBtn = document.getElementById("logo-menu");
+    const menuResponsive = document.getElementById("lien_menu_responsive");
 
-menuBtn.addEventListener("click", function () {
-    // Toggle l'affichage : "none" -> "block" ou l'inverse
-    if (menuResponsive.style.display === "inline-block") {
-        menuResponsive.style.display = "none";
-    } else {
-        menuResponsive.style.display = "inline-block";
-    }
-});
+    menuBtn.addEventListener("click", function () {
+        // Toggle l'affichage : "none" -> "block" ou l'inverse
+        if (menuResponsive.style.display === "inline-block") {
+            menuResponsive.style.display = "none";
+        } else {
+            menuResponsive.style.display = "inline-block";
+        }
+    });
 });

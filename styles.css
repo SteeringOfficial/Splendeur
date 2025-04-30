@@ -80,6 +80,9 @@ body{
     height: 450px;
 }
 /*SLIDER*/
+.responsive_slider0{
+    display: none;
+}
 .slider0{
     float: left;
     position: relative;
@@ -533,8 +536,47 @@ footer{
     
 
     /*SLIDER*/
-    .slider0 img{
+    .slider0{
+        display: none;
+    }
+    .responsive_slider0{
+        display: block;
+        float: left;
+        position: relative;
+        width: 99.99%;
+        height: 450px;
+        overflow: hidden;
+        
+    }
+
+    .responsive_slider0 img{
         width: 100%;
+        height: 450px;
+    }
+
+    img.displaySlide{
+        display: block;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    .responsive_slider0 button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 32px;
+        padding: 10px 35px;
+        background-color: hsl(0, 0%, 0%, 0);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .responsive_prev0{
+        left: 0;
+    }
+    .responsive_next0{
+        right: 0;
     }
 
 
