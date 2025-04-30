@@ -126,31 +126,21 @@ img.displaySlide{
     width: 100%;
     height: 400px;
 }
-#devis_partie1{
-    display: flex;
-    position: absolute;
-    border: 0;
-    border-radius: 50px;
-    padding: 8px 15px;
-    margin-left: 25%;
-    margin-top: 5%;
-    color: #fff;
-    background-color: #1ca700;
-    text-transform: uppercase;
-    font-size: 100px;
-    font-weight: bolder;
-    font-family: 'Anton', sans-serif;
-    text-align: center;
-    cursor: pointer;
-}
-#devis_partie1:hover{
-    transform: scale(1.06);
-}
 #partie1 img{
     display: inline-block;
     position: absolute;
     margin-left: 60%;
     height: 400px;
+}
+#P_partie1{
+    display: flex;
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 150px;
+    font-size: 30px;
+}
+#P1 strong{
+    color: #37abc8;
 }
 
 
@@ -161,31 +151,21 @@ img.displaySlide{
     width: 100%;
     height: 400px;
 }
-#devis_partie2{
-    display: flex;
-    position: absolute;
-    border: 0;
-    border-radius: 50px;
-    padding: 8px 15px;
-    margin-left: 45%;
-    margin-top: 6%;
-    color: #fff;
-    background-color: #1ca700;
-    text-transform: uppercase;
-    font-size: 100px;
-    font-weight: bolder;
-    font-family: 'Anton', sans-serif;
-    text-align: center;
-    cursor: pointer;
-}
-#devis_partie2:hover{
-    transform: scale(1.06);
-}
 #partie2 img{
     display: inline-block;
     position: absolute;
     margin-left: 5%;
     height: 400px;
+}
+#P_partie2{
+    display: flex;
+    position: absolute;
+    margin-left: 45%;
+    margin-top: 150px;
+    font-size: 30px;
+}
+#P2 strong{
+    color: #37abc8;
 }
 
 
@@ -442,22 +422,22 @@ footer{
 }
 /*IPad Mini*/
 @media screen and (max-width: 768px) and (min-width: 767px) and (max-height: 1024px) and (min-height: 1023px){
-    /*Head Bar*/
-   #head_bar_logo2{
-       left: 35% !important;
-   }
-   #head_devis{
-       margin-left: 27% !important;
-   }
+     /*Head Bar*/
+    #head_bar_logo2{
+        left: 35% !important;
+    }
+    #head_devis{
+        margin-left: 27% !important;
+    }
 
-   /*Modal*/
-   .modal{
-       font-size: 25px;
-       padding: 30px;
-   }
-   .modal p{
-       font-size: 26px !important;
-   }
+    /*Modal*/
+    .modal{
+        font-size: 25px;
+        padding: 30px;
+    }
+    .modal p{
+        font-size: 26px !important;
+    }
 }
 /*All*/
 @media screen and (max-width: 799px) and (min-width: 320px) {
@@ -562,16 +542,16 @@ footer{
     #partie1{
         height: 575px;
     }
-    #devis_partie1{
-        display: inline-block;
-        position: relative;
-        margin-top: 5px;
-    }
     #partie1 img{
         display: inline-block;
         position: relative;
         margin-left: 0%;
         width: 100%;
+    }
+    #P_partie1{
+        text-align: center;
+        margin-left: 0%;
+        margin-top: 40px;
     }
 
 
@@ -579,19 +559,17 @@ footer{
     #partie2{
         height: 575px;
     }
-    #devis_partie2{
-        display: inline-block;
-        position: relative;
-        margin-left: 25%;
-        margin-top: 5px;
-    }
     #partie2 img{
         display: inline-block;
         position: relative;
         margin-left: 0%;
         width: 100%;
     }
-
+    #P_partie2{
+        text-align: center;
+        margin-left: 0%;
+        margin-top: 40px;
+    }
 
     /*Vod*/
     #vods{
@@ -640,7 +618,7 @@ footer{
         max-height: 600px;
         min-height: 300px;
         opacity: 0;
-        width: 80%;
+        width: 75%;
         height: 80%;
         padding: 40px;
         background: #fff;
@@ -687,12 +665,17 @@ footer{
     #lien{
         display: none;
     }
-    #lien_responsive{
+    #lien_menu_responsive{
         display: none;
     }
     #responsive{
         display: inline-block;
-        padding: 15px;
+        position: relative;
+        padding: 0px;
+        width: 70px;
+        height: 70px;
+        left: -70px;
+        bottom: 15px;
         text-transform: capitalize;
         font-size: 20px;
         text-decoration: 0;
@@ -700,26 +683,37 @@ footer{
         position: relative;
         cursor: pointer;
     }
-    #menu{
-        display: inline-block;
-        cursor: pointer;
-        right: 220px;
-        bottom: 7px;
-        padding: 0;
-    }
-    #menu li:hover #lien_menu{
+    #logo_menu{
         display: inline-block;
         position: absolute;
-        top: 100%;
+    }
+    #logo_menu::after #lien_menu_responsive{
+        display: inline-block;
+        position: absolute;
+    }
+    #lien_menu_responsive{
+        position: absolute;
+        top: 67px;
         left: 0px;
-        padding: 0px;
-        z-index: 1000;
+    }
+    #lien_menu_responsive li{
+        list-style: none;
+        background-color: #000;
+    }
+    #img_logo_menu{
+        display: inline-block;
+    }
+    #menu{
+        display: inline-block;
+        position: absolute;
+        cursor: pointer;
+        right: 120px;
+        bottom: 7px;
     }
     #lien_menu{
         display: none;
         margin-top: 40px;
         margin-left: 150px;
-        padding: 0;
     }
 
 
@@ -733,34 +727,30 @@ footer{
     #partie1{
         height: 575px;
     }
-    #devis_partie1{
-        display: inline-block;
-        position: relative;
-        margin-top: 5px;
-    }
     #partie1 img{
         display: inline-block;
         position: relative;
         margin-left: 0%;
         width: 100%;
     }
-
+    #P_partie1{
+        margin-left: 10%;
+        margin-top: 75px;
+    }
 
     /*Tarif2*/
     #partie2{
         height: 575px;
-    }
-    #devis_partie2{
-        display: inline-block;
-        position: relative;
-        margin-left: 25%;
-        margin-top: 5px;
     }
     #partie2 img{
         display: inline-block;
         position: relative;
         margin-left: 0%;
         width: 100%;
+    }
+    #P_partie2{
+        margin-left: 10% ; 
+        margin-top: 75px;
     }
 
     /*Vod*/
