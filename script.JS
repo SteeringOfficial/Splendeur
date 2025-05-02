@@ -58,15 +58,30 @@ setInterval(() => {
 }, 5000); // toutes les 5 secondes
 
 
-//ModalContainer
-    const modalContainer = document.querySelector(".modal-container");
-    const modalTriggers = document.querySelectorAll(".modal-trigger");
+// ModalContainer
+const modalContainer = document.querySelector(".modal-container");
+const modalTriggers = document.querySelectorAll(".modal-trigger");
 
-    modalTriggers.forEach(trigger => trigger.addEventListener("click", toggleModal))
+modalTriggers.forEach(trigger =>
+    trigger.addEventListener("click", toggleModalContainer)
+);
 
-    function toggleModal(){
-        modalContainer.classList.toggle("active")
-    }
+function toggleModalContainer() {
+    modalContainer.classList.toggle("active");
+}
+
+// ModalContainerAutres
+const modalContainerAutres = document.querySelector(".modal-container-autres");
+const modalTriggersAutres = document.querySelectorAll(".modal-trigger-autres");
+
+modalTriggersAutres.forEach(trigger =>
+    trigger.addEventListener("click", toggleModalContainerAutres)
+);
+
+function toggleModalContainerAutres() {
+    modalContainerAutres.classList.toggle("active");
+}
+
 
 //Responsive Head_Bar
     const navMenu = document.getElementById('nav-menu'),

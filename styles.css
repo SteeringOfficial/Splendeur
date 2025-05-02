@@ -175,7 +175,6 @@ img.displaySlide{
 
 /*Vod*/
 #vod{
-    background-color: #fff;
     width: 100%;
     height: 450px;
 }
@@ -192,7 +191,6 @@ img.displaySlide{
     width: 100%;
     height: 100%;
 }
-
 /* Par défaut, le bouton est caché */
 #playPauseButton {
     opacity: 0;
@@ -219,17 +217,16 @@ img.displaySlide{
 }
 #progressContainer {
     position: absolute;
-    margin-left: 75px;
+    margin-left: 520px;
     bottom: 10px;
     left: 0;
-    width: 90%;
+    width: 40%;
     height: 8px;
     background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     border: solid #000 1px;
     border-radius: 20px;
 }
-
 #progressBar {
     height: 100%;
     width: 0%;
@@ -393,6 +390,97 @@ img.displaySlide{
     color: #37abc8;
 }
 
+/*Modal Autres*/
+.modal-container-autres{
+    /*display: none;*/
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: visibility 0.4s;
+}
+.modal-container-autres.active{
+    /*display: block;*/
+    visibility: visible;
+}
+.overlay{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333333d3;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+.modal-container-autres.active .overlay{
+    opacity: 1;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+.modal-autres{
+    opacity: 0;
+    width: 95%;
+    max-width: 700px;
+    min-width: 500px;
+    max-height: 700px;
+    min-height: 500px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 50px));
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    text-align: center;
+    align-items: center;
+}
+.modal-container-autres.active .modal-autres{
+    opacity: 1;
+    transform: translate(-50%, calc(-50%));
+    transition: opacity 0.4s 0.2s ease-out, transform 0.4s ease-out;
+}
+.close-modal-autres{
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #de0909;
+    color: #fff;
+}
+.modal-autres h1{
+    margin-bottom: 10px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+.modal-autres p{
+    line-height: 1.4;
+    margin-bottom: 1px;
+    font-size: 25px;
+}
+#copieautres{
+    width: 100%;
+    border: none;
+    height: 50px;
+    border-radius: 3px;
+    margin-top: 30px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #37abc8;
+}
+#copieautres:hover{
+    background-color: #1ca700;
+    color: #fff;
+    cursor: pointer;
+}
+.modal-container-autres a{
+    text-decoration: none;
+    color: #37abc8;
+}
+
 /*Footer*/
 footer{
     width: 100%;
@@ -461,6 +549,7 @@ footer{
 
 /*Iphone SE*/
 @media screen and (max-width: 375px) {
+    /*Modal*/
     .modal{
         max-width: 370px!important;
         min-width: 100px!important;
@@ -473,6 +562,22 @@ footer{
         left: 50%!important;
     }
     .modal p{
+        font-size: 20px!important;
+    }
+
+    /*Modal Autres*/
+    .modal-autres{
+        max-width: 370px!important;
+        min-width: 100px!important;
+        max-height: 510px!important;
+        min-height: 300px!important;
+        width: 80%!important;
+        height: 100%!important;
+        padding: 30px!important;
+        top: 55%!important;
+        left: 50%!important;
+    }
+    .modal-autres p{
         font-size: 20px!important;
     }
 }
@@ -492,6 +597,14 @@ footer{
         padding: 30px;
     }
     .modal p{
+        font-size: 26px !important;
+    }
+    /*Modal Autres*/
+    .modal-autres{
+        font-size: 25px;
+        padding: 30px;
+    }
+    .modal-autres p{
         font-size: 26px !important;
     }
 }
@@ -671,7 +784,7 @@ footer{
         margin-left: 10px;
     }
     #progressContainer {
-        margin-left: 15px;
+        margin-left: 100px;
         margin-bottom: 10px;
     }
 
@@ -731,6 +844,30 @@ footer{
         align-items: center;
     }
     .modal p{
+        font-size: 24px;
+    }
+
+    /*Modal Autres*/
+    .modal-autres{
+        max-width: 500px;
+        min-width: 100px;
+        max-height: 600px;
+        min-height: 300px;
+        opacity: 0;
+        width: 75%;
+        height: 80%;
+        padding: 40px;
+        background: #fff;
+        border-radius: 5px;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% + 50px));
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+        text-align: center;
+        align-items: center;
+    }
+    .modal-autres p{
         font-size: 24px;
     }
 
@@ -916,6 +1053,41 @@ footer{
         font-size: 33px;
     }
     #copie{
+        width: 100%;
+        border: none;
+        height: 70px;
+        border-radius: 3px;
+        margin-top: 30px;
+        font-size: 40px;
+        color: #fff;
+        background-color: #37abc8;
+    }
+
+    /*Modal Autres*/
+    .modal-autres{
+        max-width: 700px;
+        min-width: 100px;
+        max-height: 700px;
+        min-height: 300px;
+        opacity: 0;
+        width: 80%;
+        height: 80%;
+        font-size: 30px;
+        padding: 30px;
+        background: #fff;
+        border-radius: 5px;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% + 50px));
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+        text-align: center;
+        align-items: center;
+    }
+    .modal-autres p{
+        font-size: 33px;
+    }
+    #copieautres{
         width: 100%;
         border: none;
         height: 70px;

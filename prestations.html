@@ -63,7 +63,7 @@
             <p>Besoin particulier ? Contactez-nous pour un devis personnalisé.</p>
         </div>
 
-        <button id="devis_prestation" class="btn-info modal-trigger" type="button" onclick="showSection('devis_info')">Devis</button>
+        <button id="devis_prestation" class="btn-info modal-trigger-autres" type="button" onclick="showSection('devis_info')">Devis</button>
         </section>
     </main>
     </body>
@@ -94,6 +94,35 @@
             <p id="dialogDesc">Ou <br> Contacter-nous directement par téléphone<br><a href="tel:0680001935">06.80.00.19.35</a></p>
         </div>
     </div>
+    
+    <!--Modal pour Autres Devis -->
+    <div class="modal-container-autres">
+        <div class="overlay modal-trigger-autres"></div>
+        <div class="modal-autres" role="dialog" aria-labelledby="modalTitleAutres" aria-describedby="dialogDescautres">
+            <button aria-label="close-modal-autres" class="close-modal-autres modal-trigger-autres">X</button>
+            <h1 id="modalTitle-autres">Un besoins particuliers? Dites nous tous.</h1>
+            <div id="text-autres">
+                <p id="question1-autres">
+                    Je souhaite un service de .... .
+                </p>
+                <p id="question2-autres">
+                    Le lieu du service est...(Maison/Appartement/Entrpot/...)
+                </p>
+                <p id="question3-autres">
+                    J'ai le matèrielle nécessaires pour se service. (OUI/NON)
+                </p>
+                <p id="question4-autres">
+                    Mon numéro de téléphone est le ... .
+                </p>
+                <p id="question4-autres">
+                    Je m'appelle ... .
+                </p>
+            </div>
+            <a href="mailto:splendeur.service@gmail.com"><button id="copieautres">E-mail</button></a>
+            <p id="dialogDescautres">Ou <br> Contacter-nous directement par téléphone<br><a href="tel:0680001935">06.80.00.19.35</a></p>
+        </div>
+    </div>
+
     <!--Bas de Page-->
     <footer>
         <!--Droit Auteur, -->
