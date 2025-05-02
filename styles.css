@@ -175,63 +175,13 @@ img.displaySlide{
 
 /*Vod*/
 #vod{
+    background-color: #fff;
     width: 100%;
     height: 450px;
 }
-.video-wrapper {
-    position: relative;
-    margin-left: 70px;
-    margin-top: 25px;
-    width: 90%;
-    height: 425px;
-    border-radius: 50px;
-    border:#000 3px solid;
-}
-#vods {
+#vods{
     width: 100%;
-    height: 100%;
-}
-/* Par défaut, le bouton est caché */
-#playPauseButton {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-/* Le bouton apparaît quand on survole la vidéo ou le conteneur */
-.video-wrapper:hover #playPauseButton {
-    opacity: 1;
-}
-/* Style général du bouton (inchangé) */
-#playPauseButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
-    background: #37abc8;
-    color: white;
-    border: #000 solid 1px;
-    border-radius: 30%;
-    padding: 20px;
-    cursor: pointer;
-    z-index: 2;
-}
-#progressContainer {
-    position: absolute;
-    margin-left: 520px;
-    bottom: 10px;
-    left: 0;
-    width: 40%;
-    height: 8px;
-    background: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    border: solid #000 1px;
-    border-radius: 20px;
-}
-#progressBar {
-    height: 100%;
-    width: 0%;
-    background: #37abc8;
-    transition: width 0.1s linear;
+    height: 450px;
 }
 
 
