@@ -809,6 +809,9 @@ footer{
         margin-left: 100px;
         margin-bottom: 10px;
     }
+    .custom-controls{
+        display: flex;
+    }
 
 
     /*Info/Contact/Horraire*/
@@ -1021,6 +1024,9 @@ footer{
     }
     #vods{
         border-radius: 50px;
+    }
+    .custom-controls{
+        display: flex;
     }
 
 
