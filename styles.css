@@ -175,16 +175,76 @@ img.displaySlide{
 
 /*Vod*/
 #vod{
-    background-color: #fff;
     width: 100%;
     height: 450px;
 }
-#vods{
+.video-wrapper {
+    position: relative;
+    margin-left: 70px;
+    margin-top: 25px;
+    width: 90%;
+    height: 425px;
+    border-radius: 50px;
+    border:#000 3px solid;
+}
+.video-wrapper:hover .custom-controls{
+    display: flex;
+}
+.video-wrapper:fullscreen {
     width: 100%;
-    height: 450px;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+#vods {
+    width: 100%;
+    height: 100%;
+}
+/*ProgressBar*/
+#progressContainer {
+    position: absolute;
+    margin-left: 510px;
+    bottom: 10px;
+    left: 0;
+    width: 40%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    border: solid #000 1px;
+    border-radius: 20px;
+}
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #37abc8;
+    transition: width 0.1s linear;
+}
+/*Button*/
+.custom-controls{
+    margin-top: -100px;
+    display: none;
+    gap: 10px;
+    justify-content: center;
+}
+.custom-controls button {
+    font-size: 20px;
+    padding: 6px 10px;
+    cursor: pointer;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 10000;
+    transition: background-color 0.3s;
+}
+.custom-controls button:hover {
+    background-color: #444;
 }
 
-
+  
 
 /*Info/Contact/Horraire*/
 #info{
@@ -556,6 +616,18 @@ footer{
     }
     .modal-autres p{
         font-size: 26px !important;
+    }
+
+    /*VOD*/
+    .video-wrapper {
+        margin-left: 30px !important;
+    }
+    #progressContainer {
+        margin-left: 30%!important;
+        margin-bottom: 10px!important;
+    }
+    #vods{
+        border-radius: 50px!important;
     }
 }
 /*All*/
@@ -940,9 +1012,17 @@ footer{
     }
 
     /*Vod*/
-    #vods{
-        width: 100%;
+    .video-wrapper {
+        margin-left: 30px;
     }
+    #progressContainer {
+        margin-left: 30%;
+        margin-bottom: 10px;
+    }
+    #vods{
+        border-radius: 50px;
+    }
+
 
 
     /*Info/Contact/Horraire*/

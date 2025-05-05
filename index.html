@@ -45,8 +45,19 @@
 
         <!--Montage VOD de Splendeur-->
         <div id="vod">
-            <video id="vods" controls="controls" src="ph/Splendeur_VOD.mp4"></video>
-        </div>
+            <div class="video-wrapper">
+              <video id="vods" src="ph/Splendeur_VOD.mp4" preload="metadata"></video>
+              <div class="custom-controls">
+                <button id="playPauseButton" onclick="togglePlayPause()">▶</button>
+                <button id="muteBtn" onclick="toggleMute()">🔇</button>
+                <button id="fullscreenBtn" onclick="toggleFullscreen()">⛶</button>
+              </div>
+              <div id="progressContainer" onclick="seekVideo(event)">
+                <div id="progressBar"></div>
+              </div>
+            </div>
+          </div>
+
         <br>
 
         <!--Tarif Largeur et Hauteur Max ??? + photo d'exemple + bouton de devis-->
